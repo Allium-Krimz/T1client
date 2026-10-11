@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "t1client",
+	"version": "${version}",
+	"name": "T1client",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/t1client/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.T1client"
+		],
+		"client": [
+			"com.example.client.T1clientClient"
+		]
+	},
+	"mixins": [
+		"t1client.mixins.json",
+		{
+			"config": "t1client.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
